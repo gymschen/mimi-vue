@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'orderList',
+  name: 'orderList'
 }
 </script>
