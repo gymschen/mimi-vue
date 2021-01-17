@@ -1,0 +1,7 @@
+
+//  flex布局復用
+@mixin flex($hov:space-between, $col:center) {
+  display: flex;
+  justify-content: $hov;
+  align-items:$col;
+}

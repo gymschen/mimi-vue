@@ -26,8 +26,26 @@
         <div class="header-log">
           <a href="/#/index"></a>
         </div>
-        <div class="header-menu"></div>
-        <div class="header-search"></div>
+        <div class="header-menu">
+          <div class="item-menu">
+            <span>小米手機</span>
+            <div class="children"></div>
+          </div>
+          <div class="item-menu">
+            <span>RedMi紅米</span>
+            <div class="children"></div>
+          </div>
+          <div class="item-menu">
+            <span>電視</span>
+            <div class="children"></div>
+          </div>
+        </div>
+        <div class="header-search">
+          <div class="wrapper">
+            <input type="text" name="keyword" />
+            <a href="javascript:;"></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -41,6 +59,7 @@ export default {
 
 <style lang="scss" >
 @import '@/assets/scss/base.scss';
+@import '@/assets/scss/mixin.scss';
 
 .header {
   .nav-topbar {
@@ -49,9 +68,7 @@ export default {
     background-color: #333333;
     color: #b0b0b0;
     .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex();
       a {
         display: inline-block;
         color: #b0b0b0;
@@ -76,6 +93,8 @@ export default {
 
   .nav-header {
     .container {
+      height: 112px;
+      @include flex();
       .header-log {
         display: inline-block;
         width: 55px;
@@ -105,6 +124,50 @@ export default {
           &:hover:before {
             margin-left: -55px;
             transition: margin 0.2s;
+          }
+        }
+      }
+      .header-menu {
+        display: inline-block;
+        width: 264px;
+        padding-left: 209px;
+        .item-menu {
+          display: inline-block;
+          color: #333333;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 112px;
+          margin-right: 20px;
+          span {
+            cursor: pointer;
+          }
+          &:hover {
+            // background-color: yellow;
+          }
+        }
+      }
+      .header-search {
+        width: 319px;
+        .wrapper {
+          height: 50px;
+          border: 1px solid #e0e0e0;
+          display: flex;
+          align-items: center;
+          input {
+            border: none;
+            box-sizing: border-box;
+            border-right: 1px solid #e0e0e0;
+            width: 264px;
+            height: 50px;
+            padding-left: 14px;
+          }
+          a {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url('/imgs/icon-search.png') no-repeat center;
+            background-size: contain;
+            margin-left: 17px;
           }
         }
       }
