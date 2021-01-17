@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>order-header</div>
+    <div></div>
   </div>
 </template>
 
