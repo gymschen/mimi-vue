@@ -102,11 +102,149 @@
           </div>
           <div class="item-menu">
             <span>RedMi紅米</span>
-            <div class="children"></div>
+            <div class="children">
+              <ul class="childrenWrapper">
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC9</div>
+                    <div class="pro-price">1799元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="item-menu">
             <span>電視</span>
-            <div class="children"></div>
+            <div class="children">
+              <ul class="childrenWrapper">
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1607916489.75244151.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC9</div>
+                    <div class="pro-price">1799元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1607916489.75244151.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1607916489.75244151.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1607916489.75244151.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1607916489.75244151.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="__blank">
+                    <div class="pro-img">
+                      <img
+                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1607916489.75244151.png?width=140&height=140"
+                      />
+                    </div>
+                    <div class="pro-name">小米CC10</div>
+                    <div class="pro-price">1900元</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="header-search">
@@ -203,6 +341,7 @@ export default {
             color: $colorA;
             .children {
               height: 220px;
+              opacity: 1;
             }
           }
 
@@ -211,22 +350,21 @@ export default {
             top: 112px;
             left: 0px;
             width: 1226px;
-            height: 220px;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
             border-top: 1px solid #e5e5e5;
-            display: flex;
-            align-items: center;
-            flex-direction: row;
             box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.11);
             z-index: 10;
-            // background-color: #ffffff;
+            transition: all 0.5s;
             .product {
+              position: relative;
               float: left;
               width: 16.6%;
               height: 220px;
               font-size: 12px;
               line-height: 12px;
               text-align: center;
-              position: relative;
               a {
                 display: inline-block;
               }
