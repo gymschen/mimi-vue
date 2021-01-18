@@ -6,7 +6,7 @@
   align-items:$col;
 }
 
-
+// 背景圖片
 @mixin bgImg($w:0, $h:0, $img:'', $size:contain) {
   display: inline-block;
   width: $w;
