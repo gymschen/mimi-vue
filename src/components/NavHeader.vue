@@ -260,7 +260,27 @@
 
 <script>
 export default {
-  name: 'nav-header'
+  name: 'nav-header',
+  data() {
+    return {
+      username: 'jack',
+      phoneList: []
+    }
+  },
+  mounted() {
+    this.getProductList()
+  },
+  methods: {
+    getProductList() {
+      this.$axios.get('/products', {
+        params: {
+          categoryId: '10012'
+        }
+      }).then((res) => {
+        console.log('res:', res)
+      })
+    }
+  }
 }
 </script>
 
