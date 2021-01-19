@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import router from './router'
 import axios from 'axios'
-import VueAxios from 'vue-axios'
+// import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+// import 'swiper/css/swiper.css'
 import store from './store'
 import App from './App.vue'
 import env from './env'
 
-console.log('env:', env)
+// console.log('env:', env)
 
 // 根據前端的跨域方式做調整 /a/b : /api/a/b => /a/b
 axios.defaults.baseURL = env.baseURL
@@ -23,7 +24,7 @@ axios.interceptors.response.use(function (response) {
   }
 })
 
-Vue.use(VueAxios, axios)
+Vue.prototype.axios = axios
 Vue.config.productionTip = false
 
 new Vue({
