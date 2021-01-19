@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import router from './router'
 import axios from 'axios'
-// import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-// import 'swiper/css/swiper.css'
 import store from './store'
 import App from './App.vue'
 import env from './env'

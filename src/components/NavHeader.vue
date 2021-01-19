@@ -237,9 +237,7 @@ export default {
         }
       }).then((res) => {
         console.log('res:', res.list)
-        if (res.list.length >= 6) {
-          this.phoneList = res.list.slice(0, 6)
-        }
+        this.phoneList = res.list.slice(0, 6)
       })
     },
     goToCar() {
