@@ -31,70 +31,17 @@
             <span>小米手機</span>
             <div class="children">
               <ul class="childrenWrapper">
-                <li class="product">
-                  <a href="" target="__blank">
+                <li
+                  class="product"
+                  v-for="(item, index) in phoneList"
+                  :key="index"
+                >
+                  <a :href="`/#/product/${item.id}`" target="__blank">
                     <div class="pro-img">
-                      <img
-                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
-                      />
+                      <img :src="item.mainImage" :alt="item.subtitle" />
                     </div>
-                    <div class="pro-name">小米CC9</div>
-                    <div class="pro-price">1799元</div>
-                  </a>
-                </li>
-                <li class="product">
-                  <a href="" target="__blank">
-                    <div class="pro-img">
-                      <img
-                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
-                      />
-                    </div>
-                    <div class="pro-name">小米CC10</div>
-                    <div class="pro-price">1900元</div>
-                  </a>
-                </li>
-                <li class="product">
-                  <a href="" target="__blank">
-                    <div class="pro-img">
-                      <img
-                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
-                      />
-                    </div>
-                    <div class="pro-name">小米CC10</div>
-                    <div class="pro-price">1900元</div>
-                  </a>
-                </li>
-                <li class="product">
-                  <a href="" target="__blank">
-                    <div class="pro-img">
-                      <img
-                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
-                      />
-                    </div>
-                    <div class="pro-name">小米CC10</div>
-                    <div class="pro-price">1900元</div>
-                  </a>
-                </li>
-                <li class="product">
-                  <a href="" target="__blank">
-                    <div class="pro-img">
-                      <img
-                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
-                      />
-                    </div>
-                    <div class="pro-name">小米CC10</div>
-                    <div class="pro-price">1900元</div>
-                  </a>
-                </li>
-                <li class="product">
-                  <a href="" target="__blank">
-                    <div class="pro-img">
-                      <img
-                        src="https://i01.appmifile.com/webfile/globalweb/picture/pms_1603297037.44725246.png?width=140&height=140"
-                      />
-                    </div>
-                    <div class="pro-name">小米CC10</div>
-                    <div class="pro-price">1900元</div>
+                    <div class="pro-name">{{ item.name }}</div>
+                    <div class="pro-price">{{ item.price | currency }}</div>
                   </a>
                 </li>
               </ul>
@@ -267,6 +214,13 @@ export default {
       phoneList: []
     }
   },
+  // 過濾器
+  filters: {
+    currency(val) {
+      if (!val) { return '0.00' }
+      return `$${val.toFixed(2)}元`
+    }
+  },
   mounted() {
     this.getProductList()
   },
@@ -274,10 +228,13 @@ export default {
     getProductList() {
       this.axios.get('/products', {
         params: {
-          categoryId: '10012'
+          categoryId: '100012'
         }
       }).then((res) => {
-        console.log('res:', res)
+        console.log('res:', res.list)
+        if (res.list.length > 6) {
+          this.phoneList = res.list.slice(0, 6)
+        }
       })
     }
   }
