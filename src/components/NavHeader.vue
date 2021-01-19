@@ -12,8 +12,9 @@
         <!-- menu -->
         <!-- user -->
         <div class="topbar-user">
-          <a href="javascript:;">登錄</a>
-          <a href="javascript:;">注冊</a>
+          <a href="javascript:;" v-if="username">{{ username }}</a>
+          <a href="javascript:;" v-if="!username">注冊</a>
+          <a href="javascript:;">我的訂單</a>
           <a href="javascript:;" class="my-car"
             ><span class="icon-car"></span> 購物車</a
           >
@@ -228,11 +229,12 @@ export default {
     getProductList() {
       this.axios.get('/products', {
         params: {
-          categoryId: '100012'
+          categoryId: '100012',
+          pageSize: 6
         }
       }).then((res) => {
         console.log('res:', res.list)
-        if (res.list.length > 6) {
+        if (res.list.length >= 6) {
           this.phoneList = res.list.slice(0, 6)
         }
       })
