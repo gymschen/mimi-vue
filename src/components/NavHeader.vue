@@ -13,9 +13,9 @@
         <!-- user -->
         <div class="topbar-user">
           <a href="javascript:;" v-if="username">{{ username }}</a>
-          <a href="javascript:;" v-if="!username">注冊</a>
+          <a href="javascript:;" v-if="!username" @click="login()">登錄</a>
           <a href="javascript:;">我的訂單</a>
-          <a href="javascript:;" class="my-car"
+          <a href="javascript:;" class="my-car" @click="goToCar()"
             ><span class="icon-car"></span> 購物車</a
           >
         </div>
@@ -211,7 +211,7 @@ export default {
   name: 'nav-header',
   data() {
     return {
-      username: 'jack',
+      username: 'Firstfu',
       phoneList: []
     }
   },
@@ -226,6 +226,9 @@ export default {
     this.getProductList()
   },
   methods: {
+    login() {
+      this.$router.push('/login')
+    },
     getProductList() {
       this.axios.get('/products', {
         params: {
@@ -238,6 +241,9 @@ export default {
           this.phoneList = res.list.slice(0, 6)
         }
       })
+    },
+    goToCar() {
+      this.$router.push('/cart')
     }
   }
 }
