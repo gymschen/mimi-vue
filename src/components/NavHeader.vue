@@ -272,7 +272,7 @@ export default {
   },
   methods: {
     getProductList() {
-      this.$axios.get('/products', {
+      this.axios.get('/products', {
         params: {
           categoryId: '10012'
         }
