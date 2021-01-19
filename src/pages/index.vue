@@ -136,6 +136,7 @@ export default {
 
 <style lang="scss" >
 @import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/config.scss';
 
 .index {
   .swiper-box {
@@ -165,6 +166,9 @@ export default {
               right: 30px;
               top: 17.5px;
             }
+          }
+          &:hover {
+            background-color: $colorA;
           }
         }
       }
